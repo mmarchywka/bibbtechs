@@ -1,0 +1,107 @@
+
+
+\iffalse
+@software{,
+  author = {Michael J Marchywka},
+  city = {Jasper GA 30143 USA},
+  title = { Example program for  mjmaddbib.tex },
+abstract={See also some exchanges on the Texhax mailing list @tug.org },
+institution={},
+license={Knowledge sir should be free to all },
+publisher={Mike Marchywka},
+email={marchywka@hotmail.com},
+authorid={orcid.org/0000-0001-9237-455X},
+  filename = {addbibex.tex},
+  url = {},
+  version = {0.0.0},
+  date-started = {}
+}
+<one line to give the program's name and a brief idea of what it does.>
+
+
+Conceived and written by Mike Marchywka from 2019 to present.
+See dates in individual code pieces as they were
+generated from my wizards.
+Copyright (C) <year> <name of author>
+
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR
+A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program.  If not, see <http://www.gnu.org/licenses/>.
+
+   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+   A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+\fi
+
+
+
+
+
+\setlength{\paperheight}{11in}
+\documentclass[aps,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib]{revtex4}
+
+
+\newcommand{\mjmtitle}{Test Docuemnet }
+\newcommand{\mjmaddr}{44 Crosscreek Trail, Jasper GA 30143}
+\newcommand{\mjmme}{Mike Marchywka}
+\newcommand{\mjmbasename}{\jobname}
+\newcommand{\mjmversion}{ 0.00 }
+\newcommand{\mjmtrno}{MJM-test-test}
+\newcommand{\mjmemail}{marchywka@hotmail.com}
+
+\input{mjmaddbib.tex}
+
+\newcommand{\mjmmakebibday}{\number\day}
+\newcommand{\mjmmakebibmo}{\number\month}
+\newcommand{\mjmmakebibyear}{\number\year}
+
+\mjmstartbib{article}{\mjmtrno}
+\mjmaddbib{title}{\mjmtitle}
+\mjmaddbib{author}{ \mjmme }
+\mjmaddbib{number}{123}
+\mjmaddbib{version}{\mjmversion}
+\mjmaddbib{institution}{not institutionalized, independent }
+\mjmaddbib{address}{ \mjmaddr}
+\mjmaddbib{date}{\today}
+\mjmaddbib{day}{\mjmmakebibday}
+\mjmaddbib{month}{\mjmmakebibmo}
+\mjmaddbib{year}{\mjmmakebibyear}
+\mjmaddbib{email}{\mjmemail}
+
+\mjmdonebib
+
+\begin{document}
+\title{\mjmtitle}
+\author         {\mjmme}
+\email          {\mjmemail}
+\date{\today}
+\affiliation{ none }
+\maketitle
+
+Some cool paper here 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\appendix
+\section{Citing this as a tech report or white paper }
+\mjmshowbib
+\end{document}
